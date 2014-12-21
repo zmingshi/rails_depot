@@ -14,29 +14,45 @@ Things you may want to cover:
 * Database: sqlite3 or mysql.
 
 Below is the step of installation of rails4.0
-*install rvm:
+* Install rvm:
+
 	<tt>gpg --keyserver hkp://keys.gnupg.net --recv-keys D39DC0E3</tt>.
+
 	<tt>\curl -L https://get.rvm.io | bash -s stable</tt>.
 
 	<tt>source ~/.rvm/scripts/rvm </tt>.
+
 	<tt>echo "source ~/.rvm/scripts/rvm" >> ~/.bashrc </tt>.
 
-*install ruby2.0.0
+* Install ruby2.0.0
+
 	<tt>rvm requirements --autolibs=enable</tt>
+
 	<tt>rvm install 2.0.0 --autolibs=enable</tt>
-*install rails4.0.0
+
+* Install rails4.0.0
+
 	<tt>gem install rails --version 4.0.0 --no-ri --no-rdoc</tt>
 
 If you prefer mysql, you can install like this:
+
 	<tt>sudo apt-get install mysql-server mysql-client libmysqlclient-dev</tt>.
 
 then you can create an application using <tt>rails new demo</tt>.
 
 The first time you run the command <tt>rails new demo</tt>, it will install required gems by running <tt>bundle install</tt> and it costs some time.
 
-After all the required gems is installed, you can create new application using <tt>rails new demo --skip-bundle</tt>, then <tt>cd  demo</tt> and run <tt>bundle install --local</tt>, you can see all the required gems have already been installed.
+After all the required gems is installed, you can create new application using 
+
+	<tt>rails new demo --skip-bundle</tt>, 
+
+then <tt>cd  demo</tt> and run <tt>bundle install --local</tt>, 
+you can see all the required gems have already been installed.
 
 After that, starting the server like this, 
+
 	<tt>cd demo</tt>
+
 	<tt>rails server</tt>
-then you can see the application is running by accessing <a>http://localhost:3000</a>
+
+then you can see the application is running by accessing http://localhost:3000
