@@ -14,8 +14,45 @@ Depot::Application.configure do
   config.action_controller.perform_caching = false
 
   # Don't care if the mailer can't send.
-  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.raise_delivery_errors = true
+  
+  config.action_mailer.delivery_method = :test
+  
+  # Send email
+  #config.action_mailer.delivery_method = :smtp 
+  # for gmail.
+  #config.action_mailer.smtp_settings = {
+  #  address:  "smtp.gmail.com",
+  #  port: 587,
+  #  domain: "gmail.com",
+  #  authentication: "plain",
+  #  user_name: "zmingshi@gmail.com",
+  #  password: "SH891227i",
+  #  enable_starttls_auto: true
+  #}  
 
+  # for qq email, note that mail from must equal authorized user below,
+  # or it will cause 5** error.
+  #config.action_mailer.smtp_settings = {
+  #  address:  "smtp.qq.com",
+  #  port: 25,
+  #  domain: "mail.qq.com",
+  #  authentication: "plain",
+  #  user_name: "zmingshi@qq.com",
+  #  password: "1987love1989",
+  #}
+  
+  # for 163 email, note that mail from must equal authorized user below
+  # or it will cause 5** error.
+  #config.action_mailer.smtp_settings = {
+  #  address:  "smtp.163.com",
+  #  port: 25,
+  #  domain: "163.com",
+  #  authentication: "login",
+  #  user_name: "18510329165@163.com",
+  #  password: "SH891227i",
+  #  enable_starttls_auto: true
+  #}
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
 
